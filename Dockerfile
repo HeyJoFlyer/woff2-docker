@@ -11,5 +11,3 @@ RUN cd $BUILD_DIR/woff2 && \
     make clean all
 
 COPY woff2-all.sh /usr/bin/woff2-all.sh
-
-#CMD ["/usr/bin/woff2-all.sh"]
