@@ -4,22 +4,31 @@ This project allows you to create a docker container which automatically compres
 
 ## Usage
 
-### Building
+### Pulling from docker hub
 
-´´´bash
+```bash
+docker pull heyjoflyer/woff2-docker:latest
+```
+
+[Docker hub link](https://hub.docker.com/repository/docker/heyjoflyer/woff2-docker/general)
+
+
+### Or building (You don't need to build anymore!)
+
+```bash
 git clone https://github.com/HeyJoFlyer/woff2-docker.git
 cd brotli-docker
 docker build -t brotli-docker .
-´´´
+```
 
 ### Starting Container
-Before starting the container you need to have two directories(you can change the path in the ´docker run´ command):
+Before starting the container you need to have two directories(you can change the path in the `docker run` command):
 * One input folder with the fonts that need to be compressed (internal /usr/local/in)
 * One output folder where the compressed fonts are going to be saved to (internal /usr/local/out)
 
-´´´bash
+```bash
 docker run -it -v $(pwd)/in:/usr/local/in -v $(pwd)/out:/usr/local/out brotli-docker /usr/bin/woff2-all.sh
-´´´
+```
 
 ## Licenses
 
