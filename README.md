@@ -29,6 +29,7 @@ Before starting the container you need to have two directories(you can change th
 ```bash
 docker run -it -v $(pwd)/in:/usr/local/in -v $(pwd)/out:/usr/local/out brotli-docker /usr/bin/woff2-all.sh
 ```
+Even if the output says the compression has failed, the .woff2 file are good!
 
 ## Licenses
 
